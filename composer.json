@@ -1,0 +1,21 @@
+{
+	"name": "monitor",  
+	"description": "",  
+	"minimum-stability": "dev",
+	"require": {
+		"php": ">=5.4",
+	},  
+	"scripts": {  
+		"pre-install-cmd": [  
+			"echo \"pre-install-cmd\""  
+		],  
+		"post-install-cmd": [  
+			"echo \"post-install-cmd\""  
+		],  
+		"post-update-cmd": [  
+			"echo \"post-update-cmd\""  
+		]  
+	},  
+	"repositories": [  
+	] 
+}
