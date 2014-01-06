@@ -1,5 +1,6 @@
 !.gitignore                                                                                                                                                                 
 *.lock
+*~
 INSTALL.txt
 LICENSE.txt
 README.txt

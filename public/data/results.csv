@@ -1,0 +1,4 @@
+date,hour,elapsed,label,responseCode,success,bytes,grpThreads,allThreads,Latency,Hostname
+2013-12-27,17:41:13,2,01_Timer_1,200,TG 1-50,true,338,1,1,0,ecosrvint01p
+2013-12-27,17:41:13,435,01_visit-page_accueil,200,TG 1-50,true,1993,1,1,435,ecosrvint01p
+2013-12-27,17:41:09,445,01_Accueil,200,TG 1-50,true,2331,1,1,435,ecosrvint01p

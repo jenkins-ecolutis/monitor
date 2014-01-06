@@ -1,24 +1,27 @@
 $(document).ready(function() {
 	var options = {
 		chart: {
-			renderTo: 'graph1',
-			type: 'column'
+			renderTo: 'ResponseTimesOverTime',
 		},
 		title: {
-			text: 'Fruit Consumption'
+			text: 'Evolution des temps de réponses'
+		},
+		subtitle: {
+			text: '26/12/2013',
+			x: -20
 		},
 		xAxis: {
 			categories: []
 		},
 		yAxis: {
 			title: {
-				text: 'Units'
+				text: 'Temps de réponses (sec)'
 			}
 		},
-			series: []
+		series: []
 	};
 
-	$.get('data/example.cvs', function(data) {
+	$.get('data/results.csv', function(data) {
 		// Split the lines
 		var lines = data.split('\n');
 		$.each(lines, function(lineNo, line) {
@@ -28,8 +31,10 @@ $(document).ready(function() {
 			if (lineNo == 0) {
 				$.each(items, function(itemNo, item) {
 					if (itemNo > 0) options.xAxis.categories.push(item);
+					//alert('Catégories : ' + item);
 				});
 			}
+			
 					
 			// the rest of the lines contain data with their name in the first position
 			else {
@@ -37,11 +42,12 @@ $(document).ready(function() {
 					data: []
 				};
 				$.each(items, function(itemNo, item) {
-					if (itemNo == 0) {
+					if (itemNo == 3) {
 						series.name = item;
-						//alert('series.name : ' + item);
+						alert('series.name : ' + item);
 					} else {
 						series.data.push(parseFloat(item));
+						//alert('series.data : ' + item);
 					}
 				});
 
